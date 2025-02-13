@@ -1,0 +1,13 @@
+.app{
+  margin-inline: auto;
+  background-color: #DDDDDD;
+  border: 1px black solid;
+  width: 850px;
+  height: 600px;
+  
+}
+.bleuRed{
+  margin-inline: auto;
+  display: flex;
+  gap: 20px;
+}

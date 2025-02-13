@@ -1,0 +1,17 @@
+.mainContent{
+    /* margin-inline: auto; */
+    display:flex;
+    flex-direction:column;
+    gap: 50px;
+    width: 600px;
+    height: 400px;
+    background-color: #DF6768;
+    border:1px black solid;
+    padding: 5px;
+}
+.su{
+    
+    display: flex ;
+    gap:10px;
+    justify-content: space-between;
+}
