@@ -16,7 +16,7 @@
 
         useEffect(() => {
             axios
-                .get(`http://localhost:5000/api/books/${id}`)
+                .get(`http://localhost:5000/api/books/${id}/details`)
                 .then((res) => {
                     console.log(res.data);
                     setFormData({
@@ -35,7 +35,7 @@
         const submitHandler = (e) => {
             e.preventDefault();
             axios
-                .put(`http://localhost:5000/api/books/${id}`, formData)
+                .put(`http://localhost:5000/api/books/${id}/details`, formData)
                 .then((res) => {
                     console.log("Book updated:", res.data);
                     navigate("/");
@@ -129,7 +129,7 @@
                                     </label>
                                 </div>
                                 <button type="submit" className="btn btn-primary w-100">
-                                     Update Book
+                                    Update Book
                                 </button>
                             </form>
                         </div>
@@ -139,4 +139,4 @@
         );
     };
 
-    export default Update;
+    export default Update

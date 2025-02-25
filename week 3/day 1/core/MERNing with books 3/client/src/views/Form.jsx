@@ -4,6 +4,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Form = () => {
+	const [ErrorHandler, setErrorHandler] = useState({});
+	
 	const navigate = useNavigate();
 	const [formData, setFormData] = useState({
 		title: "",
@@ -23,6 +25,8 @@ const Form = () => {
 			})
 			.catch((err) => {
 				console.log(err);
+				setErrorHandler(err.response.data.errors);
+
 			});
 	};
 
@@ -54,6 +58,13 @@ const Form = () => {
 									type="text"
 									placeholder="Enter book title"
 								/>
+								 {ErrorHandler.title ? (
+                                        <p className="mt-2 alert alert-danger">
+                                            {ErrorHandler.title.message}
+                                        </p>
+                                    ) : (
+                                        <></>
+                                    )}
 							</div>
 							<div className="mb-3">
 								<label className="form-label fw-bold">Author Name</label>
@@ -65,6 +76,11 @@ const Form = () => {
 									type="text"
 									placeholder="Enter author's name"
 								/>
+								{ErrorHandler.author && (
+                                        <p className="mt-2 alert alert-danger">
+                                            {ErrorHandler.author.message}
+                                        </p>
+                                    )}
 							</div>
 							<div className="mb-3">
 								<label className="form-label fw-bold">Page Count</label>
@@ -76,6 +92,11 @@ const Form = () => {
 									type="number"
 									placeholder="Number of pages"
 								/>
+								 {ErrorHandler.pages && (
+                                        <p className="mt-2 alert alert-danger">
+                                            {ErrorHandler.pages.message}
+                                        </p>
+                                    )}
 							</div>
 							<div className="form-check mb-3">
 								<input
@@ -91,7 +112,7 @@ const Form = () => {
 								</label>
 							</div>
 							<button type="submit" className="btn btn-primary w-100">
-								 Add Book
+								Add Book
 							</button>
 						</form>
 					</div>
