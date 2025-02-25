@@ -1,47 +1,37 @@
 import React from "react";
 import { Link } from "react-router";
 
-const NavBar = ({ BookCatalog, title, addBook, update }) => {
-	return (
-		<div>
-			<nav style={{ background: "#f8f9fa", padding: "10px" }}>
-				<div
-					style={{
-						display: "flex",
-						justifyContent: "space-between",
-						alignItems: "center",
-					}}
-				>
-					<div>
-						<Link
-							className="btn btn-dark"
-							to={"/"}
-							style={{
-								marginRight: "15px",
-								textDecoration: "none",
-								color: "white",
-							}}
-						>
-							Catalog
-						</Link>
-						<Link
-							className="btn btn-success"
-							to={"/books/create"}
-							style={{ textDecoration: "none", color: "white" }}
-						>
-							Add Book
-						</Link>
-					</div>
-					<div className="mr-2">
-						<h1 >{BookCatalog}</h1>
-						<h1 style={{ margin: 0  , backgroundColor: "black"}}>{title}</h1>
-						<h1 style={{ margin: 0 }}>{addBook}</h1>
-						<h1 style={{ margin: 0 }}> Update {update} </h1>
-					</div>
-				</div>
-			</nav>
-		</div>
-	);
+const NavBar = ({ BookCatalog, title, addBook }) => {
+return (
+    <div className=' mt-4 d-flex justify-content-between '>
+
+            
+            
+                <div>
+                    <Link
+                        className="btn btn-dark"
+                        to={"/"}
+                        
+                    >
+                        Catalog
+                    </Link>
+                    <Link
+                        className="btn btn-success"
+                        to={"/books/create"}
+                        
+                    >
+                        Add Book
+                    </Link>
+                </div>
+                <div >
+                    <h1>{BookCatalog}</h1>
+                    <h1 >{title}</h1>
+                    <h1 >{addBook}</h1>
+                </div>
+            
+        
+    </div>
+);
 };
 
-export default NavBar;
+export default NavBar;          

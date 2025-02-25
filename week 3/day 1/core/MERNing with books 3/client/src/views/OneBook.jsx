@@ -50,7 +50,7 @@ import { useNavigate } from "react-router-dom";
                                 oneBookDetails.isAvailable ? "text-success" : "text-danger"
                             }`}
                         >
-                            Status:{" "}
+                            
                             {oneBookDetails.isAvailable
                                 ? "Available for Borrowing"
                                 : "The Book is Already Taken"}
