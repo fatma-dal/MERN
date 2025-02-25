@@ -43,7 +43,7 @@ const Form = () => {
 						className="card shadow-lg p-4"
 						style={{ width: "28rem", borderRadius: "15px" }}
 					>
-						<h3 className="text-center mb-4 text-primary">📚 Add a New Book</h3>
+						
 						<form onSubmit={submitHandler}>
 							<div className="mb-3">
 								<label className="form-label fw-bold">Title</label>
@@ -79,6 +79,9 @@ const Form = () => {
 								/>
 							</div>
 							<div className="form-check mb-3">
+								<label className="form-check-label" htmlFor="isAvailableCheck">
+									Is it available?
+								</label>
 								<input
 									className="form-check-input"
 									name="isAvailable"
@@ -87,12 +90,9 @@ const Form = () => {
 									type="checkbox"
 									id="isAvailableCheck"
 								/>
-								<label className="form-check-label" htmlFor="isAvailableCheck">
-									Is it available?
-								</label>
 							</div>
 							<button type="submit" className="btn btn-primary w-100">
-								➕ Add Book
+								Add Book
 							</button>
 						</form>
 					</div>

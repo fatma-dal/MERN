@@ -38,7 +38,7 @@ const allBooks = () => {
 									<td>{book.title}</td>
 									<td>{book.author}</td>
 									<td>{book.pages}</td>
-									<td>{book.isAvailable ? "+" : "X"}</td>
+									<td>{book.isAvailable ? "Yes" : "NO"}</td>
 									<td>
 										<Link
 											to={`/books/${book._id}/details`}

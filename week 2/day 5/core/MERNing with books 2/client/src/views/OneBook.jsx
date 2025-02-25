@@ -10,8 +10,9 @@ import { useNavigate } from "react-router-dom";
     const { id } = useParams();
 
     useEffect(() => {
+        console.log('*******************')
         axios
-            .get(`http://localhost:8000/api/books/${id}/details`)
+            .get(`http://localhost:8000/api/books/${id}`)
             .then((res) => {
                 console.log(res.data);
                 setOneBookDetails(res.data);
@@ -23,7 +24,7 @@ import { useNavigate } from "react-router-dom";
 
     const deleteBook = () => {
         axios
-            .delete(`http://localhost:8000/api/books/${id}/details`)
+            .delete(`http://localhost:8000/api/books/${id}`)
             .then((res) => {
                 console.log(res.data);
                 navigate("/");
@@ -50,7 +51,7 @@ import { useNavigate } from "react-router-dom";
                                 oneBookDetails.isAvailable ? "text-success" : "text-danger"
                             }`}
                         >
-                            Status:{" "}
+                            
                             {oneBookDetails.isAvailable
                                 ? "Available for Borrowing"
                                 : "The Book is Already Taken"}
