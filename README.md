@@ -18,7 +18,7 @@ My goal is to:
 👩‍💻 Build a strong foundation for professional opportunities
 
 🛠️ Technologies Used
-Frontend: React, JSX, CSS, Tailwind, React Router, etc.
+Frontend: React, JSX, CSS, Bootstrap, React Router, etc.
 
 Backend: Node.js, Express.js
 
@@ -42,9 +42,9 @@ This is a living repository, which I will continue to update with new projects, 
 🤝 Let's Connect
 If you’re a developer, recruiter, or fellow learner — feel free to explore, fork, or suggest ideas! I’m always open to feedback and collaboration.
 
-📫 fatma.dalhoumi@example.com (replace with your actual email)
-🔗 LinkedIn (optional)
-🔗 Portfolio (optional)
+📫 fatmadalhoumi123@gmail.com
+🔗 Fatma Dalhoumi
+
 
 Thank you for stopping by! 🙌
 
