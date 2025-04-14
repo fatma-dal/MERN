@@ -1,4 +1,6 @@
 MERN Stack Journey 🚀
+
+
 Welcome to my MERN Stack Journey repository!
 This is a collection of my projects and practice exercises as I learn and grow as a full-stack developer using the MERN (MongoDB, Express.js, React, Node.js) technology stack.
 
